@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background: #050505;
+  color: #eaeaea;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  background: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  font-size: 64px;
+  letter-spacing: 6px;
+}
+
+.tagline {
+  margin-top: 10px;
+  opacity: 0.6;
+  text-transform: lowercase;
+}
+
+.status {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #00ff88;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+.links {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  color: #eaeaea;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  border-color: #00ff88;
+  color: #00ff88;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
